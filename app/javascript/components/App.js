@@ -1,13 +1,15 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Greeting from "./Greeting";
+import { Route, Routes } from "react-router-dom";
+import { Message } from "./Message";
 
-const App = () => (
-  <Router>
-    <Switch>
-      <Route exact path="/" component={Greeting} />
-    </Switch>
-  </Router>
-);
+function App() {
+  return (
+    <React.StrictMode>
+      <Routes>
+        <Route path="/" element={<Message />} />
+      </Routes>
+    </React.StrictMode>
+  );
+}
 
 export default App;
